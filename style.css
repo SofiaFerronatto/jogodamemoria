@@ -1,0 +1,35 @@
+/* style.css */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: sans-serif;
+}
+
+.tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(4, 100px); /* 4 colunas para os 4 pares [cite: 6] */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.carta {
+    width: 100px;
+    height: 100px;
+    background-color: #2e3d49; /* Cor sólida quando fechada [cite: 7] */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: transparent; /* Esconde o emoji inicialmente */
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* Classe extra para quando a carta for clicada [cite: 19, 22] */
+.carta.revelada {
+    background-color: #ffffff;
+    color: initial; /* Mostra o emoji */
+    cursor: default;
+}
